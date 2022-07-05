@@ -32,3 +32,11 @@ else return unit;
 }
 
 WriteLine(DigCompare(new Random().Next(10,99)));
+
+WriteLine();
+WriteLine("14. Найти третью цифру числа или сообщить, что её нет");
+
+string? number1 = ReadLine();
+int check = ToInt32(number1);
+if (check > 999) WriteLine(number1, 0);
+else {SelectDigit(number1, 0);}
