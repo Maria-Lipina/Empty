@@ -16,3 +16,12 @@ int factor = Convert.ToInt32(ReadLine());
 
 if(FactorCheck(number3, factor)) WriteLine("Кратно");
 else {Write("Не кратно. Остаток: " + number3 % factor);}
+
+
+WriteLine();
+WriteLine("15. Дано число. Проверить кратно ли оно 7 и 23");
+
+int number4 = Convert.ToInt32(ReadLine());
+
+if (FactorCheck(number4, 7) && FactorCheck(number4, 23)) WriteLine ("Кратно");
+else {Console.WriteLine ("Не кратно");}
