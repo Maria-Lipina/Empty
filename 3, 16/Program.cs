@@ -18,3 +18,9 @@ _ => "нет дня недели с таким номером"
 };
 }
 WriteLine(Week(ToInt32(ReadLine())));
+
+
+WriteLine();
+WriteLine("16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным");
+
+WriteLine(Week(ToInt32(ReadLine())));
