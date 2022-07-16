@@ -1,6 +1,18 @@
 ﻿using static System.Console;
 using static System.Convert;
 
+int[] CreateMyArray(int length)
+{
+    return new int[length];
+}
+
+string PrintMyArray(int[] collect)
+{
+    string outputString = String.Empty;
+    for (int pos = 0; pos < collect.Length; pos++) outputString += $"{collect[pos]} ";
+    return outputString;
+}
+
 WriteLine();
 WriteLine("19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0");
 
