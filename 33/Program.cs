@@ -57,11 +57,20 @@ return array;
 };
 }
 
+int ArraySum (int[] A)
+{int sum = 1;
+for (int i = 1; i < A.Length; i++)
+{
+    sum = sum + A[i];
+}
+return sum;
+}
+
 WriteLine();
 WriteLine("33. Задать массив из 12 элементов, заполненных числами из [-9,9]. Найти сумму положительных/отрицательных элементов массива");
 
 int[] arr2 = CreateMyArray(12);
-FillMyArray(arr, -9, 9);
+FillMyArray(arr2, -9, 9);
 WriteLine(PrintMyArray(arr2));
 
 int [] signed = SelectBySign(arr2, -1);
