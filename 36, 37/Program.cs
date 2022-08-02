@@ -1,4 +1,7 @@
-﻿int[] CreateMyArray(int length)
+﻿using static System.Console;
+using static System.Convert;
+
+int[] CreateMyArray(int length)
 {
     return new int[length];
 }
@@ -34,7 +37,7 @@ return result;
 WriteLine("36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных и четных чисел");
 int [] A6 = CreateMyArray(15);
 FillMyArray(A6, 100, 999);
-WriteLine(PrintMyArray(A5));
+WriteLine(PrintMyArray(A6));
 WriteLine(Count(A6, 2));
 WriteLine(Count(A6, 1));
 
