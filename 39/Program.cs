@@ -1,4 +1,8 @@
-﻿int[] CreateMyArray(int length)
+﻿using static System.Console;
+using static System.Convert;
+
+
+int[] CreateMyArray(int length)
 {
     return new int[length];
 }
