@@ -32,23 +32,20 @@ string Print2DArray(int[,] collection)
     return outputString;
 }
 
-void ChangeEvens(int[,] arr)
+
+WriteLine("51. Задать двумерный массив следующим правилом: Aₘₙ = m+n");
+
+
+void FillIndexSums (int[,] array)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
-        {
-            if (arr[i, j] % 2 == 0)
-            {
-                arr[i, j] = -arr[i, j];
-            }
-        }
+        array[i,j] = i + j;
     }
 }
-
-WriteLine("50. В двумерном массиве n*k заменить четные элементы на противоположные");
-
-int[,] ar = Create2DArray(5, 6);
-Fill2DArray(ar, 1, 21);
-ChangeEvens(ar);
-WriteLine(Print2DArray(ar));
+}
+int[,] mn = Create2DArray(6, 10);
+FillIndexSums(mn);
+WriteLine(Print2DArray(mn));
