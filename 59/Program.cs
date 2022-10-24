@@ -1,10 +1,7 @@
 ﻿using static System.Console;
 using static System.Convert;
 
-int[,] Create2DArray(int rows, int columns)
-{
-    return new int[rows, columns];
-}
+WriteLine("59. В прямоугольной матрице найти строку с наименьшей суммой элементов.");
 
 void Fill2DArray(int[,] collection, int minValue, int maxValue)
 {
@@ -32,15 +29,28 @@ string Print2DArray(int[,] collection)
     return outputString;
 }
 
-WriteLine("54. В матрице чисел найти сумму элементов главной диагонали");
-
-int [,] cd = Create2DArray (20, 20);
-Fill2DArray(cd, 10, 100);
-WriteLine(Print2DArray(cd));
-
-int sum = 0;
-for (int i = 0; i < cd.GetLength(1); i++)
+int LineWithMinSumElems(int[,] arr)
 {
-sum = sum + cd [i, i];   
+    int minSum = int.MaxValue;
+    int lineNo = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            sum += arr[i, j];
+        }
+        if (sum < minSum)
+        {
+            minSum = sum;
+            lineNo = i;
+        }
+    }
+    return lineNo;
 }
-WriteLine(sum);
+
+
+var arr = new int[5, 5];
+Fill2DArray(arr, 0, 30);
+WriteLine(Print2DArray(arr));
+WriteLine(LineWithMinSumElems(arr));

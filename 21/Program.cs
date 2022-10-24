@@ -1,7 +1,7 @@
 ﻿using static System.Console;
 using static System.Convert;
 
-WriteLine("21. Программа проверяет пятизначное число на палиндром."); //черновой вариант
+WriteLine("21. Программа проверяет пятизначное число на палиндром.");
 WriteLine();
 
 bool Palindrome (int [] digits)
