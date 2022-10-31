@@ -6,18 +6,6 @@ int[,] Create2DArray(int rows, int columns)
     return new int[rows, columns];
 }
 
-void Fill2DArray(int[,] collection, int minValue, int maxValue)
-{
-    for (int i = 0; i < collection.GetLength(0); i++)
-    {
-        for (int j = 0; j < collection.GetLength(1); j++)
-        {
-            collection[i, j] = new Random().Next(minValue, maxValue + 1);
-        }
-
-    }
-}
-
 string Print2DArray(int[,] collection)
 {
     string outputString = String.Empty;
