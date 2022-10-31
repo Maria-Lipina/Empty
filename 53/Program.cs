@@ -49,6 +49,12 @@ if (found.Length > startLen) return found;
 else return notfound;
 }
 
+WriteLine("53. В двумерном массиве показать позиции числа, заданного пользователем или указать, что такого элемента нет");
+
+int [,] ab = Create2DArray(6, 10);
+Fill2DArray(ab, 0, 10);
+WriteLine(Print2DArray(ab));
+
 WriteLine(
     FindIndexes(
         ToInt32(ReadLine()), ab));
